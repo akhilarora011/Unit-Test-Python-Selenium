@@ -5,6 +5,7 @@ import unittest
 
 from Pages.LoginPage import LoginPage
 from Pages.HomePage import HomePage
+import HtmlTestRunner
 
 class LoginTest(unittest.TestCase):
 
@@ -34,3 +35,6 @@ class LoginTest(unittest.TestCase):
         cls.driver.close()
         cls.driver.quit()
         print("Test Was Successfull")
+
+if __name__ == '__main__':
+    unittest.main(testRunner=HtmlTestRunner.HTMLTestRunner(output='E:/Pom1/reports'))
